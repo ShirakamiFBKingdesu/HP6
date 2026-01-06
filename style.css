@@ -637,48 +637,51 @@ ul { list-style: none; }
     border: none;
     cursor: pointer;
 }
-/* --- TRANG TÀI KHOẢN (AUTH PAGE) --- */
-.auth-page {
+/* --- TRANG ĐĂNG NHẬP / ĐĂNG KÝ (Căn giữa màn hình) --- */
+.single-auth-page {
     display: flex;
-    justify-content: space-between;
-    padding: 60px 20px;
-    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
 }
 
-.auth-box {
-    flex: 1;
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
 }
 
 .auth-title {
-    font-size: 28px;
+    text-align: center;
     color: #333;
     margin-bottom: 30px;
-    text-align: center;
+    font-size: 26px;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
+.form-group { margin-bottom: 20px; }
 
 .form-group label {
     display: block;
-    font-weight: bold;
     margin-bottom: 8px;
-    font-size: 14px;
+    font-weight: bold;
 }
 
 .form-group input {
     width: 100%;
-    padding: 12px 15px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 8px; /* Bo góc nhẹ giống ảnh mẫu */
-    font-size: 15px;
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #fcfcfc;
 }
 
 .btn-auth {
     width: 100%;
-    background-color: #5ab9ea; /* Màu xanh FBK */
+    background-color: #5ab9ea;
     color: white;
     padding: 14px;
     border: none;
@@ -689,61 +692,34 @@ ul { list-style: none; }
     margin-top: 10px;
 }
 
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid #5ab9ea;
-    color: #5ab9ea;
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
 }
 
-/* Nút mạng xã hội */
+.auth-footer a { color: #5ab9ea; font-weight: bold; }
+
+/* Nút Google / Zalo */
 .social-divider {
     text-align: center;
-    margin: 30px 0;
+    margin: 25px 0;
     position: relative;
+    font-size: 13px; color: #999;
 }
 
-.social-divider::before {
-    content: "";
-    position: absolute;
-    top: 50%; left: 0; width: 100%; height: 1px;
-    background: #eee;
-    z-index: 1;
-}
+.social-login { display: flex; gap: 15px; }
 
-.social-divider span {
-    background: #fff;
-    padding: 0 15px;
-    position: relative;
-    z-index: 2;
-    color: #888;
-    font-size: 13px;
-}
-
-.social-login {
-    display: flex;
-    gap: 15px;
-}
-
-.btn-google, .btn-zalo {
+.social-login button {
     flex: 1;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background: white;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: bold;
 }
-
-.btn-google { color: #db4437; }
-.btn-zalo { color: #0068ff; }
-
-.auth-note {
-    font-size: 13px;
-    color: #777;
-    line-height: 1.5;
-    margin-top: 10px;
-}
-
 /* --- TRANG GIỎ HÀNG (CART PAGE) --- */
 .cart-table {
     width: 100%;
