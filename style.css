@@ -308,44 +308,54 @@ nav {
 }
 
 /* --- HERO SECTION (PHẦN QUAN TRỌNG NHẤT) --- */
+/* --- PHẦN CHA (NỀN NGOÀI CÙNG) --- */
+
+/* --- NỀN BAO PHỦ TOÀN MÀN HÌNH --- */
 .hero-section {
     position: relative;
-    height: 100vh; /* Chiều cao bằng 100% màn hình */
+    height: 100vh;           /* Cao bằng 100% màn hình */
+    width: 100%;             /* Rộng bằng 100% màn hình */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-image: url('img/cu04cqq59vie1.jpeg');
-    background-size: cover;
-    background-position: center;
+    align-items: center;     /* Căn giữa khối nội dung theo chiều dọc */
+    justify-content: center;  /* Căn giữa khối nội dung theo chiều ngang */
+    
+    /* ĐƯA ẢNH NỀN VÀO ĐÂY ĐỂ FULL MÀN */
+    background-image: url('img/cu04cqq59vie1.jpeg'); 
+    background-size: cover;      /* Ảnh tự co giãn để phủ kín màn hình */
+    background-position: center top; /* Luôn lấy tâm ảnh làm trung tâm */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Tạo hiệu ứng ảnh đứng yên khi cuộn (Parallax) */
 }
 
+/* --- LỚP PHỦ MỜ (OVERLAY) CẢ MÀN HÌNH --- */
 .overlay {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.3); /* Phủ trắng mờ để nổi bật chữ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Phủ trắng mờ nhẹ để không làm tối ảnh quá mức */
+    z-index: 1;
 }
 
-.hero-content {
+/* --- KHỐI NỘI DUNG Ở GIỮA (GIỮ NGUYÊN STYLE ĐẸP CỦA BẠN) --- */
+.text-group {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Đẩy chữ lên trên lớp phủ */
 }
 
 .main-title {
-    font-size: 60px;
-    line-height: 1.2;
+    font-size: clamp(30px, 8vw, 60px); /* Tự động co chữ theo màn hình */
     color: #008ba3;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+    margin-bottom: 15px;
 }
 
 .hero-slogan {
-    font-size: 24px;
-    font-style: italic;
-    margin-bottom: 40px;
+    font-size: 20px;
+    margin-bottom: 30px;
     color: #333;
+    font-weight: 500;
 }
-
 .royal-btn {
     padding: 15px 40px;
     border: 2px solid #5ab9ea;
@@ -721,37 +731,42 @@ ul { list-style: none; }
     font-weight: bold;
 }
 /* --- TRANG GIỎ HÀNG (CART PAGE) --- */
-.cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
+/* Thu nhỏ ảnh sản phẩm trong bảng */
+.cart-table img {
+    width: 80px; /* Chỉnh lại độ rộng ảnh tùy ý bạn */
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-right: 15px;
 }
 
-.cart-table th {
-    text-align: left;
-    padding: 15px;
-    border-bottom: 2px solid #5ab9ea;
-}
-
+/* Căn giữa các nội dung trong ô theo chiều dọc */
 .cart-table td {
-    padding: 15px;
+    padding: 10px 15px; /* Giảm padding lại cho gọn */
+    vertical-align: middle;
     border-bottom: 1px solid #eee;
 }
 
-.total-price {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: right;
+/* Tạo khối cho cột Sản phẩm để ảnh và tên nằm ngang hàng */
+.product-info {
+    display: flex;
+    align-items: center;
 }
 
-.total-price span { color: #5ab9ea; }
-.floating-contact {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-    text-decoration: none;
+/* Thu nhỏ ô nhập số lượng */
+.cart-table input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Chỉnh lại tổng tiền cho thanh thoát */
+.total-price {
+    font-size: 20px; /* Giảm từ 24px xuống 20px */
+    margin-top: 20px;
+    padding-right: 15px;
 }
 
 .fb-style {
@@ -777,19 +792,32 @@ ul { list-style: none; }
 }
 
 /* --- NÚT TRONG KHUNG LIÊN HỆ --- */
+/* --- SỬA LẠI KHUNG BAO NGOÀI --- */
+.request-content {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo hàng dọc */
+    align-items: flex-start; /* Căn lề trái (hoặc center nếu muốn ra giữa) */
+    gap: 15px; /* Tạo khoảng cách tự động giữa chữ và nút */
+    padding: 20px;
+}
+
+/* --- SỬA LẠI NÚT LIÊN HỆ --- */
 .fb-btn {
+    display: inline-block; /* Quan trọng: Giúp nút nhận diện khoảng cách margin/padding */
     background-color: #1877F2 !important;
     color: white !important;
     border: none !important;
-    padding: 15px 40px;
+    padding: 12px 30px; /* Chỉnh lại padding cho cân đối */
     font-size: 16px;
+    text-decoration: none; /* Bỏ gạch chân của thẻ link */
+    border-radius: 8px; /* Bo góc nhẹ cho hiện đại */
+    margin-top: 10px; /* Tạo thêm khoảng cách với dòng chữ bên trên */
 }
 
 .fb-btn:hover {
     background-color: #166fe5 !important;
     box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3);
 }
-
 /* Hiệu ứng rung nhẹ để gây chú ý (Tùy chọn) */
 @keyframes shake {
   0% { transform: rotate(0deg); }
