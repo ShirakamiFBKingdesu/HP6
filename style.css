@@ -144,7 +144,6 @@ footer {
     box-shadow: 0 4px 15px rgba(90, 185, 234, 0.3);
 }
 
-
 /* Bố cục chính: Sidebar + Main Content */
 .product-page {
     display: flex;
@@ -278,8 +277,6 @@ footer {
 
 
 /*--------------------------------- Thiết lập index-------------------------------------------------*/
-
-
 .hero-section {
     position: relative;
     height: 100vh;           
@@ -325,7 +322,6 @@ footer {
     color: #333;
     font-weight: 500;
 }
-
 
 /*  INTRO SECTION  */
 .intro-section {
@@ -460,7 +456,6 @@ footer {
     margin-bottom: 15px;
 }
 
-
 .seemore {
     width: 100%;           
     display: flex;         
@@ -468,8 +463,6 @@ footer {
     margin-top: 50px;      
     margin-bottom: 30px;   
 }
-
-
 
 
 
@@ -548,8 +541,11 @@ footer {
     cursor: pointer;
     font-weight: bold;
 }
-/* --- TRANG GIỎ HÀNG  --- */
 
+
+
+
+/* --- TRANG GIỎ HÀNG  --- */
 .cart-table img {
     width: 80px; 
     height: auto;
@@ -635,3 +631,6 @@ footer {
     background-color: #166fe5 !important;
     box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3);
 }
+
+
+
