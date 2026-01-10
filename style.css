@@ -144,6 +144,7 @@ footer {
     box-shadow: 0 4px 15px rgba(90, 185, 234, 0.3);
 }
 
+
 /* Bố cục chính: Sidebar + Main Content */
 .product-page {
     display: flex;
@@ -277,6 +278,8 @@ footer {
 
 
 /*--------------------------------- Thiết lập index-------------------------------------------------*/
+
+
 .hero-section {
     position: relative;
     height: 100vh;           
@@ -322,6 +325,7 @@ footer {
     color: #333;
     font-weight: 500;
 }
+
 
 /*  INTRO SECTION  */
 .intro-section {
@@ -456,6 +460,7 @@ footer {
     margin-bottom: 15px;
 }
 
+
 .seemore {
     width: 100%;           
     display: flex;         
@@ -463,6 +468,8 @@ footer {
     margin-top: 50px;      
     margin-bottom: 30px;   
 }
+
+
 
 
 
@@ -541,11 +548,8 @@ footer {
     cursor: pointer;
     font-weight: bold;
 }
-
-
-
-
 /* --- TRANG GIỎ HÀNG  --- */
+
 .cart-table img {
     width: 80px; 
     height: auto;
@@ -634,3 +638,102 @@ footer {
 
 
 
+
+/* --- Deatail  --- */
+
+.detail-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px 20px;
+    align-items: flex-start;
+}
+
+.detail-left {
+    flex: 1.2; 
+}
+
+.main-detail-img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #e1f5fe;
+}
+
+.detail-right {
+    flex: 1;
+}
+
+.product-title {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 30px;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.buy-box {
+    background: #f4faff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #d4eeff;
+}
+
+.qty-input {
+    margin-bottom: 20px;
+}
+
+.qty-input input {
+    padding: 8px;
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+.btn-add-to-cart, .btn-buy-now-red {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-add-to-cart {
+    background-color: white;
+    color: #5ab9ea;
+    border: 2px solid #5ab9ea;
+}
+
+.btn-buy-now-red {
+    background-color: #5ab9ea;
+    color: white;
+}
+
+.btn-buy-now-red:hover {
+    background-color: #3ba0d6;
+}
+
+.short-desc {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.full-description {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.full-description h2 {
+    color: #008ba3;
+}
