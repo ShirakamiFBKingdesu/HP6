@@ -2,8 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập - ShirakamiFBKingShop</title>
+    <title>Giỏ hàng - ShirakamiFBKingShop</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -17,39 +16,38 @@
         </ul>
     </nav>
 
-    <div class="container single-auth-page">
-        <div class="auth-card">
-            <h2 class="auth-title">Đăng nhập</h2>
-            <form>
-                <div class="form-group">
-                    <label>Email hoặc Số điện thoại</label>
-                    <input type="text" placeholder="Nhập tài khoản..." required>
-                </div>
-                <div class="form-group">
-                    <label>Mật khẩu</label>
-                    <input type="password" placeholder="Nhập mật khẩu..." required>
-                </div>
-                <div class="auth-action">
-                <button type="submit" class="btn">Đăng nhập</button>
-                </div>
-            </form>
-
-            <div class="auth-footer">
-                <p>Chưa có tài khoản? <a href="dangky.html">Đăng ký tại đây</a></p>
-                <a href="#">Quên mật khẩu?</a>
-            </div>
-
-            <div class="social-divider">
-                <span>Hoặc đăng nhập bằng</span>
-            </div>
-            
-            <div class="social-login">
-                <button class="btn" style="color: #db4437;">Google</button>
-                <button class="btn" style="color: #0068ff;">Zalo</button>
-            </div>
+    <div class="container cart-page">
+        <h2 class="page-title">Giỏ hàng của bạn</h2>
+        <div class="cart-table-wrapper">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá tiền</th>
+                        <th>Số lượng</th>
+                        <th>Tổng cộng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-info">
+                            <img src="./img/36-1741429674406.webp" alt="Thumb">
+                            <span>Figure 1/7 Scale Fubuki</span>
+                        </td>
+                        <td>3.000.000 đ</td>
+                        <td><input type="number" value="1" min="1"></td>
+                        <td>3.000.000 đ</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">Thành tiền: <span>3.000.000 đ</span></div>
+            <button class="btn-buy">Tiến hành thanh toán</button>
         </div>
     </div>
-
-    <footer><p>&copy; 2024 ShirakamiFBKingShop</p></footer>
+    <footer>
+        <p>&copy; 2024 ShirakamiFBKingShop. The Simp Kingdom.</p>
+    </footer>
 </body>
 </html>
