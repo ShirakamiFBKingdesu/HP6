@@ -1,10 +1,17 @@
-/* Thiết lập chung và Nav (Giữ nguyên từ code trước) */
+/* Thiết lập chung và Navigation và Header và Footer */
 body {
-    margin: 0;
     font-family: 'Quicksand', sans-serif;
-    background-color: white; 
+    background-color: #ffffff;
     color: #333;
 }
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif; 
+    font-weight: 700;
+}
+
+a { text-decoration: none; }
+ul { list-style: none; }
 
 .container {
     max-width: 1200px;
@@ -12,6 +19,7 @@ body {
     padding: 20px;
 }
 
+/* Thiết lập Navigation */
 nav {
     background-color: #5ab9ea; /* Xanh nhạt */
     padding: 15px 40px;
@@ -44,11 +52,44 @@ nav a {
     font-weight: 500;
     font-size: 18px;
 }
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
 
-/* --- PHẦN MỚI THEO YÊU CẦU --- */
+.nav-links a {
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
 
+.nav-links a:hover {
+    color: #5ab9ea;
+}
+
+/* Logo */
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5ab9ea; 
+    letter-spacing: 2px;
+}
+
+/* Thiết lập header cố định */
+header {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 .header-banner {
-    background-color: #f4faff; /* Nền trắng khói */
+    background-color: #f4faff; 
     padding: 30px 20px;
     text-align: center;
     border-bottom: 1px solid #d4eeff;
@@ -62,26 +103,65 @@ nav a {
 
 .header-banner p {
     color: #555;
+ 
     margin: 0;
 }
+
+/* Thiết lập footer */
+footer {
+    background-color: #5ab9ea; 
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 5px solid #3ba0d6;
+}
+
+/* Thiết lập trang sản phẩm */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nút chung */
+.btn {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 2px solid #5ab9ea;
+    background-color: transparent;
+    color: #5ab9ea;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #5ab9ea;
+    color: white;
+    box-shadow: 0 4px 15px rgba(90, 185, 234, 0.3);
+}
+
 
 /* Bố cục chính: Sidebar + Main Content */
 .product-page {
     display: flex;
-    gap: 30px; /* Khoảng cách giữa sidebar và nội dung */
+    gap: 30px; 
     padding-top: 30px;
 }
 
 .sidebar {
-    width: 250px; /* Độ rộng cố định cho sidebar */
+    width: 250px; 
     padding: 20px;
-    background-color: #fff; /* Nền trắng */
+    background-color: #fff; 
     border-right: 1px solid #eee;
-    height: fit-content; /* Giúp sidebar không chiếm hết chiều cao */
+    height: fit-content; 
 }
 
 .sidebar h3 {
-    color: #5ab9ea; /* Màu tiêu đề sidebar */
+    color: #5ab9ea; 
     font-size: 20px;
     margin-top: 0;
     padding-bottom: 5px;
@@ -89,7 +169,7 @@ nav a {
     margin-bottom: 15px;
 }
 
-/* Sidebar - Tìm kiếm */
+
 .search-box {
     margin-bottom: 30px;
 }
@@ -102,7 +182,7 @@ nav a {
     box-sizing: border-box;
 }
 
-/* Sidebar - Danh mục */
+
 .category-list ul {
     list-style: none;
     padding: 0;
@@ -123,7 +203,7 @@ nav a {
     text-decoration: underline;
 }
 
-/* Sidebar - Mức giá */
+
 .price-filter label {
     display: block;
     margin-bottom: 8px;
@@ -132,12 +212,12 @@ nav a {
     cursor: pointer;
 }
 
-/* Nội dung chính */
+
 .main-content {
-    flex-grow: 1; /* Cho phép phần nội dung chiếm hết phần còn lại */
+    flex-grow: 1; 
 }
 
-/* Lưới sản phẩm (Product Grid) */
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -159,7 +239,7 @@ nav a {
 
 .product-item img {
     width: 100%;
-    height: 200px; /* Giảm chiều cao ảnh để phù hợp với bố cục */
+    height: 200px; 
     object-fit: contain; 
     border-radius: 5px;
     margin-bottom: 15px;
@@ -181,20 +261,8 @@ nav a {
     margin-bottom: 15px;
 }
 
-.btn-buy {
-    background-color: #5ab9ea; 
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    display: inline-block;
-    font-weight: bold;
-}
 
-.btn-buy:hover {
-    background-color: #3ba0d6;
-}
-/*Page Home */
+
 .background-image-home{
     position: absolute;
     top: 150px;
@@ -204,148 +272,49 @@ nav a {
     background-size: auto 200%;
     background-position: center;
 }
-.watermark {
-    position: fixed; 
-    
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    background-color: #1d1d1d;
-    opacity: 0.2; 
-    font-weight: bold;
-    z-index: 1000;
-    
-    pointer-events: none; 
-    
-    user-select: none; 
-}
 
-/* Footer (Giữ nguyên) */
-footer {
-    background-color: #5ab9ea; 
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 50px;
-    border-top: 5px solid #3ba0d6;
-}
-/* --- CÀI ĐẶT CƠ BẢN --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* --- CÀI ĐẶT CƠ BẢN --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/*--------------------------------- Thiết lập home-------------------------------------------------*/
-body {
-    /* Font 'Cinzel' cho tiêu đề (kiểu Kingdom), 'Quicksand' cho nội dung */
-    font-family: 'Quicksand', sans-serif;
-    background-color: #ffffff;
-    color: #333;
-}
 
-h1, h2, h3 {
-    font-family: 'Cinzel', serif; /* Font chữ phong cách hoàng gia */
-    font-weight: 700;
-}
 
-a { text-decoration: none; }
-ul { list-style: none; }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
-/* --- HEADER & NAV --- */
-header {
-    position: fixed; /* Cố định menu khi cuộn */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.95); /* Màu trắng hơi trong suốt */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+/*--------------------------------- Thiết lập index-------------------------------------------------*/
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-}
 
-.logo {
-    font-family: 'Cinzel', serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #5ab9ea; /* Xanh Fubuki */
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: #333;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #5ab9ea;
-}
-
-/* --- HERO SECTION (PHẦN QUAN TRỌNG NHẤT) --- */
-/* --- PHẦN CHA (NỀN NGOÀI CÙNG) --- */
-
-/* --- NỀN BAO PHỦ TOÀN MÀN HÌNH --- */
 .hero-section {
     position: relative;
-    height: 100vh;           /* Cao bằng 100% màn hình */
-    width: 100%;             /* Rộng bằng 100% màn hình */
+    height: 100vh;           
+    width: 100%;             
     display: flex;
-    align-items: center;     /* Căn giữa khối nội dung theo chiều dọc */
-    justify-content: center;  /* Căn giữa khối nội dung theo chiều ngang */
+    align-items: center;     
+    justify-content: center;  
     
-    /* ĐƯA ẢNH NỀN VÀO ĐÂY ĐỂ FULL MÀN */
+
     background-image: url('img/cu04cqq59vie1.jpeg'); 
-    background-size: cover;      /* Ảnh tự co giãn để phủ kín màn hình */
-    background-position: center top; /* Luôn lấy tâm ảnh làm trung tâm */
+    background-size: cover;     
+    background-position: center top; 
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Tạo hiệu ứng ảnh đứng yên khi cuộn (Parallax) */
+    background-attachment: fixed; 
 }
 
-/* --- LỚP PHỦ MỜ (OVERLAY) CẢ MÀN HÌNH --- */
+/* Lớp phủ mờ trắng */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* Phủ trắng mờ nhẹ để không làm tối ảnh quá mức */
+    background: rgba(255, 255, 255, 0.2); 
     z-index: 1;
 }
 
-/* --- KHỐI NỘI DUNG Ở GIỮA (GIỮ NGUYÊN STYLE ĐẸP CỦA BẠN) --- */
+
 .text-group {
     position: relative;
-    z-index: 2; /* Đẩy chữ lên trên lớp phủ */
+    z-index: 2; 
 }
 
 .main-title {
-    font-size: clamp(30px, 8vw, 60px); /* Tự động co chữ theo màn hình */
+    font-size: clamp(30px, 8vw, 60px); 
     color: #008ba3;
     margin-bottom: 15px;
 }
@@ -356,25 +325,9 @@ nav {
     color: #333;
     font-weight: 500;
 }
-.royal-btn {
-    padding: 15px 40px;
-    border: 2px solid #5ab9ea;
-    background-color: transparent;
-    color: #5ab9ea;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
-.royal-btn:hover {
-    background-color: #5ab9ea;
-    color: white;
-    box-shadow: 0 0 15px #5ab9ea;
-}
 
-/* --- INTRO SECTION --- */
+/*  INTRO SECTION  */
 .intro-section {
     padding: 80px 20px;
     text-align: center;
@@ -394,10 +347,10 @@ nav {
     margin: 20px auto;
 }
 
-/* --- CATEGORIES SECTION --- */
+/*  CATEGORIES SECTION  */
 .categories-section {
     padding: 60px 20px;
-    background-color: #f4faff; /* Màu nền xanh rất nhạt */
+    background-color: #f4faff; 
 }
 
 .category-grid {
@@ -435,7 +388,6 @@ nav {
     text-align: center;
 }
 
-/* --- PRODUCTS SECTION --- */
 .products-section {
     padding: 80px 20px;
 }
@@ -508,146 +460,21 @@ nav {
     margin-bottom: 15px;
 }
 
-.buy-btn {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-}
 
-.buy-btn:hover {
-    background-color: #5ab9ea;
-}
-/* Thẻ bao quanh (Cha) */
-/* Container bao quanh nút */
 .seemore {
-    width: 100%;           /* Đảm bảo khung bao chiếm hết chiều ngang */
-    display: flex;         /* Kích hoạt flexbox */
-    justify-content: center; /* Căn giữa nội dung bên trong theo chiều ngang */
-    margin-top: 50px;      /* Khoảng cách với phần sản phẩm phía trên */
-    margin-bottom: 30px;   /* Khoảng cách với footer */
+    width: 100%;           
+    display: flex;         
+    justify-content: center; 
+    margin-top: 50px;      
+    margin-bottom: 30px;   
 }
 
-/* Nút bấm */
-.seemore-btn {
-    display: inline-block; /* Để padding và border bao quanh chữ chuẩn xác */
-    padding: 15px 40px;
-    border: 2px solid #5ab9ea;
-    background-color: transparent;
-    color: #5ab9ea;
-    font-family: 'Cinzel', serif; /* Giữ font kiểu Kingdom của bạn */
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-decoration: none;  /* Bỏ gạch chân mặc định của thẻ a */
-    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi di chuột */
-    cursor: pointer;
-}
 
-/* Hiệu ứng khi di chuột vào nút */
-.seemore-btn:hover {
-    background-color: #5ab9ea;
-    color: white;
-    box-shadow: 0 4px 15px rgba(90, 185, 234, 0.3);
-}
 
-/* Footer */
-footer {
-    background-color: #008ba3;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    font-family: 'Cinzel', serif;
-    text-align: center;
-}
 
-/*--------------------------------- Thiết lập buy-------------------------------------------------*/
-body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #ffffff;
-    color: #333;
-}
-h1, h2, h3 {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-}
-a { text-decoration: none; }
-ul { list-style: none; }
-.cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-.cart-table th {
-    background-color: #f4faff;
-    padding: 15px;
-    border-bottom: 2px solid #5ab9ea;
-}
-.cart-table td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-}
-.cart-table input {
-    width: 50px;
-    padding: 5px;
-}
-.btn-remove {
-    background: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-}
-.cart-summary {
-    text-align: right;
-    margin-top: 30px;
-}
-.account-page {
-    display: flex;
-    justify-content: space-around;
-    gap: 50px;
-    padding: 50px 20px;
-}
-.account-box {
-    flex: 1;
-    max-width: 400px;
-    padding: 30px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    background-color: #fcfcfc;
-}
-.account-box h3 {
-    color: #5ab9ea;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-.form-group {
-    margin-bottom: 15px;
-}
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-.account-box .btn-buy {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-}
-/* --- TRANG ĐĂNG NHẬP / ĐĂNG KÝ (Căn giữa màn hình) --- */
+
+
+/* --- TRANG ĐĂNG NHẬP / ĐĂNG KÝ  --- */
 .single-auth-page {
     display: flex;
     justify-content: center;
@@ -689,18 +516,6 @@ ul { list-style: none; }
     background-color: #fcfcfc;
 }
 
-.btn-auth {
-    width: 100%;
-    background-color: #5ab9ea;
-    color: white;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
 
 .auth-footer {
     text-align: center;
@@ -710,7 +525,10 @@ ul { list-style: none; }
 }
 
 .auth-footer a { color: #5ab9ea; font-weight: bold; }
-
+.auth-action {
+    text-align: center; 
+    margin-top: 10px;
+}
 /* Nút Google / Zalo */
 .social-divider {
     text-align: center;
@@ -730,30 +548,30 @@ ul { list-style: none; }
     cursor: pointer;
     font-weight: bold;
 }
-/* --- TRANG GIỎ HÀNG (CART PAGE) --- */
-/* Thu nhỏ ảnh sản phẩm trong bảng */
+/* --- TRANG GIỎ HÀNG  --- */
+
 .cart-table img {
-    width: 80px; /* Chỉnh lại độ rộng ảnh tùy ý bạn */
+    width: 80px; 
     height: auto;
     border-radius: 8px;
     display: block;
     margin-right: 15px;
 }
 
-/* Căn giữa các nội dung trong ô theo chiều dọc */
+
 .cart-table td {
-    padding: 10px 15px; /* Giảm padding lại cho gọn */
+    padding: 10px 15px; 
     vertical-align: middle;
     border-bottom: 1px solid #eee;
 }
 
-/* Tạo khối cho cột Sản phẩm để ảnh và tên nằm ngang hàng */
+
 .product-info {
     display: flex;
     align-items: center;
 }
 
-/* Thu nhỏ ô nhập số lượng */
+
 .cart-table input[type="number"] {
     width: 50px;
     padding: 5px;
@@ -762,15 +580,15 @@ ul { list-style: none; }
     text-align: center;
 }
 
-/* Chỉnh lại tổng tiền cho thanh thoát */
+
 .total-price {
-    font-size: 20px; /* Giảm từ 24px xuống 20px */
+    font-size: 20px; 
     margin-top: 20px;
     padding-right: 15px;
 }
 
 .fb-style {
-    background-color: #1877F2 !important; /* Màu xanh Facebook */
+    background-color: #1877F2 !important; 
     color: white;
     padding: 12px 20px;
     border-radius: 50px;
@@ -791,42 +609,29 @@ ul { list-style: none; }
     background-color: #166fe5 !important;
 }
 
-/* --- NÚT TRONG KHUNG LIÊN HỆ --- */
-/* --- SỬA LẠI KHUNG BAO NGOÀI --- */
+
 .request-content {
     display: flex;
-    flex-direction: column; /* Sắp xếp các phần tử theo hàng dọc */
-    align-items: flex-start; /* Căn lề trái (hoặc center nếu muốn ra giữa) */
-    gap: 15px; /* Tạo khoảng cách tự động giữa chữ và nút */
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 15px; 
     padding: 20px;
 }
 
-/* --- SỬA LẠI NÚT LIÊN HỆ --- */
+
 .fb-btn {
-    display: inline-block; /* Quan trọng: Giúp nút nhận diện khoảng cách margin/padding */
+    display: inline-block; 
     background-color: #1877F2 !important;
     color: white !important;
     border: none !important;
-    padding: 12px 30px; /* Chỉnh lại padding cho cân đối */
+    padding: 12px 30px; 
     font-size: 16px;
-    text-decoration: none; /* Bỏ gạch chân của thẻ link */
-    border-radius: 8px; /* Bo góc nhẹ cho hiện đại */
-    margin-top: 10px; /* Tạo thêm khoảng cách với dòng chữ bên trên */
+    text-decoration: none; 
+    border-radius: 8px; 
+    margin-top: 10px; 
 }
 
 .fb-btn:hover {
     background-color: #166fe5 !important;
     box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3);
-}
-/* Hiệu ứng rung nhẹ để gây chú ý (Tùy chọn) */
-@keyframes shake {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(3deg); }
-  50% { transform: rotate(0eg); }
-  75% { transform: rotate(-3deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.floating-contact:hover .fb-style {
-    animation: shake 0.5s infinite;
 }
